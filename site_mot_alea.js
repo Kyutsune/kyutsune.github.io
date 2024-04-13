@@ -28,7 +28,9 @@ let jeu_relance=false;
 
 let jeu_en_cours=false;
 
-let Token_github='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';
+
+//Merci de mettre le votre juste la dessous
+//let Token_github='';
 function enlever_un_mot()
 {
     affichage_un_mot.textContent=""
