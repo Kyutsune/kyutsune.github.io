@@ -28,7 +28,7 @@ let jeu_relance=false;
 
 let jeu_en_cours=false;
 
-let Token_github='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';
+let Token_github='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';
 function enlever_un_mot()
 {
     affichage_un_mot.textContent=""
