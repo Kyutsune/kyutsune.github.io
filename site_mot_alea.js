@@ -28,8 +28,7 @@ let jeu_relance=false;
 
 let jeu_en_cours=false;
 
-
-
+let Token_github='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';
 function enlever_un_mot()
 {
     affichage_un_mot.textContent=""
@@ -242,9 +241,25 @@ bouton_stop.addEventListener("click",fonction_calcul_moyenne_temps)
 
 document.addEventListener('DOMContentLoaded', fonction_increment_var_test);
 
-let compteur_global = 0; 
-function fonction_increment_var_test() {
-    compteur_global++;
-    console.log(compteur_global);
-    champ_variable_globale.innerHTML = compteur_global; 
+async function fonction_increment_var_test() {
+    fetch('https://api.github.com/repos/kyutsune/kyutsune.github.io/contents/database/test_database.json', {
+        method: 'GET',
+        headers: {
+            'Authorization': `token ${Token_github}`
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur lors de la récupération du contenu du fichier');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Le contenu du fichier sera encodé en base64, vous devez le décoder
+        let content = atob(data.content);
+        console.log(content);
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+    });
 }
