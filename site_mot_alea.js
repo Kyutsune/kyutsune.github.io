@@ -4,6 +4,11 @@ let input_joueur = document.querySelector("#input_joueur");
 let champ_reponse_joueur = document.querySelector("#reponse_joueur");
 let champ_score = document.querySelector("#Score");
 let champ_temps_moyen=document.querySelector("#temps_moyen_ecriture");
+
+
+let bouton_test_var_globale=document.querySelector("#var_globale");
+let champ_variable_globale=document.querySelector("#affichage_variable_globale");
+
 let mot_actuel;
 let compteur=0;
 // Déclaration des variables pour compter le temps écoulé
@@ -233,3 +238,13 @@ function Clear_champs_ms()
 
 
 bouton_stop.addEventListener("click",fonction_calcul_moyenne_temps)
+
+
+document.addEventListener('DOMContentLoaded', fonction_increment_var_test);
+
+let compteur_global = 0; 
+function fonction_increment_var_test() {
+    compteur_global++;
+    console.log(compteur_global);
+    champ_variable_globale.innerHTML = compteur_global; 
+}
