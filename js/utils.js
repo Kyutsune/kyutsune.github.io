@@ -96,8 +96,6 @@ function restart_game() {
         gameState.grid[point.y][point.x] = 'path';
     });
 
-    // Ajouter des tours et des projectiles pour redémarrer le jeu
-    gameState.towers.push({ x: 2, y: 2, width: gridSize, height: gridSize });
     gameState.projectiles.push({ x: 3 * gridSize, y: 3 * gridSize, width: 10, height: 10 });
 
     // Réinitialiser les intervalles
