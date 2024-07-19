@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  
+  #gameCanvas {
+    border: 12px solid #fff;
+  }
+  
+  .txt_argent{
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .txt_vie{
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
